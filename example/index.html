@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    html {
+      text-align: center;
+    }
+
+    .mx-auto {
+      width: 70%;
+      margin-top:20px;
+    }
+
+    .btn {
+      background-color: #0B85A1;
+      color: #ffffff;
+      font-size: 140%;
+      margin-right: 3%;
+    }
+
+    #start {
+      padding: 1% 8%;
+    }
+
+    #stop {
+      padding: 1% 9%;
+    }
+
+    pre {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    video {
+	margin-top: 20px;
+        width: 30%;
+    }
+
+    .option {
+        margin-bottom: 8px;
+    }
+
+    #media {
+      text-align: center;
+    }
+
+    #btn {
+      text-align: center;
+    }
+
+    .card-body {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+
+    .btn:hover {
+      color: #ffffff;
+    }
+
+    #chart {
+      margin: 0 auto;
+      margin-top: 20px;
+      position: relative;
+      height:35vh;
+      width:45vw;
+    }
+
+    @media screen and (max-width: 768px) {
+      .txt {
+          font-size: 100%
+      }
+      video {
+          width: 80%
+      }
+      #chart {
+          width: 68vw;
+      }
+      .btn {
+	  font-size: 100%;
+      }
+      .mx-auto {
+          width: 85%;
+      }
+    }
+    </style>
+</head>
+<body>
+
+<div class="mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <div id="btn">
+          <button type="button" class="btn" id="start" onclick="start()">
+            <i class="fa fa-play-circle left" aria-hidden="true"></i> START</button>
+          <button type="button" class="btn" id="stop" onclick="stop()">
+            <i class="fa fa-stop-circle left" aria-hidden="true"></i> STOP</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="media" style="display: none">
+          <video id="video" autoplay="true" playsinline="true"></video>
+      </div>
+    </div>
+    <div id="chart">
+        <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script type="text/javascript" src="client.js"></script>
+
+</body>
+</html>
